@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Siga | Touche</title>
+  <link rel="icon" href="../assets/img/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Kaushan+Script" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="../assets/css/lighter.min.css" />
+  <link href="../assets/css/prism.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/app.css">
+</head>
+<body class="docBody">
+
+
+  <!-- Sidenav -->
+  <div id="sidebar-toggle">
+    <span id="sidebar-toggle-1"></span>
+    <span id="sidebar-toggle-2"></span>
+    <span id="sidebar-toggle-3"></span>
+  </div>
+  <aside class="sidebar">
+    <h2 class="sidebar-head"><a class="zoom-fade" href="../index.html">Siga"</a></h2>
+    <div class="sidebar-nav text-center">
+
+      <a href="../index.html">Home</a>
+      <a href="docs.html">Getting Started</a> 
+      <hr><!-- End Getting started -->
+      <a href="animations.html">Siga Animation</a>
+      <a href="core.html">Siga Core</a>
+      <a href="enumerable.html">Siga Enumerable</a>
+      <a href="events.html">Siga Events</a>  
+      <a href="ajax.html">Siga Ajax</a>     
+      <a href="class.html">Siga Class</a>
+      <a href="plugins.html">Siga Plugins</a>
+      <a href="touche.html">Siga Touche</a>
+    </div>
+  </div>
+</aside>
+<!-- Main -->
+<div class="post">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="text-purpple"><a href="##">#</a> Siga touche</h3>
+                <hr>
+                <h6 class="text-purpple">Introduction:</h6>
+                <p>Siga touche is created to Support touchscreen devices. Run Siga.touch.register() to get touch event support.</p>
+                <h6 class="text-purpple">Tap</h6>
+                <pre>
+                  <code class="language-javascript">
+Siga.events.add(element, 'tap', function(e) {
+  alert('tap');
+});                  </code>
+                </pre>
+                <hr>
+                <h6 class="text-purpple">Swip</h6>
+                <pre>
+                  <code class="language-javascript">
+Siga.events.add(element, 'swipe', function(e) {
+  alert('swipe');
+});                   
+                  </code>
+                </pre>
+                <hr>
+                <h6 class="text-purpple">Orientation Changes</h6> 
+                <p>Device orientation is available in Siga.touch.orientation().</p>
+                <pre>
+                  <code class="language-javascript">
+Siga.events.add(element, 'orientationchange', function(e) {
+  alert('Orientation is now: ' + Siga.touch.orientation());
+});                    
+                  </code>
+                </pre>
+            </div>    
+        </div>
+    </div>   
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="../assets/js/siga.min.js"></script>
+    <script type="text/javascript" src="../assets/js/app.js"></script>
+    <script src="../assets/js/prism.js"></script>
+    <!-- Dropdown Script -->
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+     
+ </script>
+ <!-- Sidenav -->
+ <script type="text/javascript">
+    var sidebarToggle = document.getElementById("sidebar-toggle");
+
+    sidebarToggle.addEventListener("click", function() {
+      document.body.classList.toggle("close");
+  });
+
+    $('h2').on("touchstart",function (){
+  //simply starts listening for touchstart - allows for hover state on touch devices
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Siga | Getting Started</title>
+  <link rel="icon" href="../assets/img/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Kaushan+Script" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="../assets/css/lighter.min.css" />
+  <link href="../assets/css/prism.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/app.css">
+</head>
+<body class="docBody">
+
+
+  <!-- Sidenav -->
+  <div id="sidebar-toggle">
+    <span id="sidebar-toggle-1"></span>
+    <span id="sidebar-toggle-2"></span>
+    <span id="sidebar-toggle-3"></span>
+  </div>
+  <aside class="sidebar">
+    <h2 class="sidebar-head"><a class="zoom-fade" href="../index.html">Siga"</a></h2>
+    <div class="sidebar-nav text-center">
+
+      <a href="../index.html">Home</a>
+      <a href="docs.html">Getting Started</a> 
+      <hr><!-- End Getting started -->
+      <a href="animations.html">Siga Animation</a>
+      <a href="core.html">Siga Core</a>
+      <a href="enumerable.html">Siga Enumerable</a>
+      <a href="events.html">Siga Events</a>  
+      <a href="ajax.html">Siga Ajax</a>     
+      <a href="class.html">Siga Class</a>
+      <a href="plugins.html">Siga Plugins</a>
+      <a href="touche.html">Siga Touche</a>
+    </div>
+  </div>
+</aside>
+<!-- Main -->
+<div class="post">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="text-purpple"><a href="##">#</a> Getting Started</h3>
+                <hr>
+                <p>Siga is a JavaScript framework created for simplify javascript.</p>
+                <p>The DOM, Events, and Anim modules are chainable, like this:</p>
+                <pre>
+                  <code class="language-javascript">
+Siga('p')
+      .fadeIn(2000)
+      .animate(1000, { color: '#ff0000' })
+      .click(function() { alert('clicked'); });                    
+                  </code>
+                </pre>
+                <p>This is the easiest way to use Siga</p>
+                <p>The DOM results can be manipulated with the Siga.enumerable (source : sigaEnu.js) module methods:</p>
+                <pre>
+                  <code class="language-javascript">
+Siga('p')
+      .map(function(element) { return element.innerHTML; })
+      .values();                    
+                  </code>
+                </pre>
+                <p>The values method returns the results of the last operation, in this case each paragraph's innerHTML.</p>
+                <p>Arrays or objects can be iterated using Siga(), too:</p>
+                <pre>
+                  <code class="language-javascript">
+Siga([1, 2, 3])
+      .map(function(n) { return n + 1; })
+      .values();
+
+    // => [2, 3, 4]                    
+                  </code>
+                </pre>
+            </div>    
+        </div>
+    </div>   
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="..assets/js/siga.min.js"></script>
+    <script type="text/javascript" src="..assets/js/app.js"></script>
+    <script src="../assets/js/prism.js"></script>
+    <!-- Dropdown Script -->
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+     
+ </script>
+ <!-- Sidenav -->
+ <script type="text/javascript">
+    var sidebarToggle = document.getElementById("sidebar-toggle");
+
+    sidebarToggle.addEventListener("click", function() {
+      document.body.classList.toggle("close");
+  });
+
+    $('h2').on("touchstart",function (){
+  //simply starts listening for touchstart - allows for hover state on touch devices
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Siga | Awesome Javascript Library</title>
+  <link rel="icon" href="assets/img/favicon.png">
+  <!-- Font Awesome -->
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+ <link href="assets/css/prism.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/lighter.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/app.css">
+</head>
+<body>
+
+
+  <!-- Menu -->
+   <!-- Header -->
+  <header>
+
+        <nav class="navbar menu ok">
+            <a href="#menu" class="toggle">
+                <h5>|||</h5>
+            </a>
+            <a href="amine1107.github.io/lighter" class="brand">Siga"</a>
+            <div class="link-right">
+                <a href="pages/docs.html" class="link">Documentation</a>
+              <a href="https://github.com/amine1107/siga" class="link"><i class="fab fa-github fa-lg"></i></a>
+            </div>
+        </nav>
+    </header><br>
+  <!-- /Header -->
+  
+  <!-- Introduction -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 showing sea text-center">
+        <h1>Siga<span id="brandFade">"</span></h1>
+        <hr>
+        <h5>Awesome JavaScript Library For Building Real App</h5>
+        <button class="btn">V.0.0.1</button>
+      </div>
+      <div class="col-6 showing fruit text-center">
+        <h5>Pure Javascript</h5>
+        <hr>
+        <pre><code class="language-javascript"><!-- CDN Code -->
+  var elem = document.getElementById("animate");   
+  var pos = 0;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.left = pos + 'px'; 
+    }
+  }     
+        </code>    
+        </pre>
+      </div>
+      <div class="col-6  showing fruit text-center">
+        <h5>Siga</h5>
+        <hr>
+        <pre><code class="language-javascript"><!-- CDN Code -->
+// DOM chained methods           
+ Siga.anim.animate(S('#animate')[0], 2000, {
+   'marginLeft': '350px'
+ });
+
+
+
+ // Or Easly : 
+ S.anim.animate(S('#animate')[0], 2000, {
+   'marginLeft': '350px'
+ }); 
+        </code>    
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- /Introduction -->
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 mauve">
+        <h5>Siga was created to make development in javascript easier, with a simple code that is easy to read and write, you can create any app fastly and efficiency. </h5>
+      </div>
+      <div class="col-12 border">
+        <h4 class="text-underline">1 - Getting Started.</h4>
+        <p>These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.</p>
+        <h5>a - Download Siga.</h5>
+        <p>the installation of Siga is very simple, you can get a copy by downloading the minified file : : <a href="https://raw.githubusercontent.com/amine1107/siga/master/siga.min.js" download="lightx">Download</a></p>
+        <h5>b -Using CDN</h5>
+        <p>In a very simple way, you can also import the default flavor of Lightx using the CDN.</p>
+        <pre><code class="language-html"><!-- CDN Code -->
+&lt;script type="text/javascript" src="https://gitcdn.xyz/repo/amine1107/siga/master/siga.min.js">&lt;/script>       
+        </code>    
+        </pre>
+        <h5>c - Using Git.</h5>
+         <pre><code class="language-git">
+$ git clone https://github.com/amine1107/siga.git  
+        </code>        
+        </pre>
+          <hr>
+        <h4 class="text-underline">2 - Running the tests.</h4>
+        <p>After downloading Siga,importit in your html file</p>
+        <pre><code class="language-html">
+&lt;script type="text/javascript" src="../siga.min.css">&lt;/script>
+        </code>
+        </pre>
+    </div>
+  </div>
+      <div class="col-12 border">
+        <h5 class="text-underline">Features.</h5>
+        <ul>
+          <li>Easy to learn</li>
+          <li>Easy to use</li>
+          <li>Powerful Api</li>
+          <li>Modern Javascript</li>
+          <li>Animation</li>
+          <li>DOM</li>
+          <li>Ajax</li>
+        </ul>
+        <hr>
+        <h5 class="text-underline">Source.</h5>
+        <p>Siga was created with Pure Javascript, and using 12 module.</p>
+        <p>Structure of Siga :</p>
+        <pre>
+      |---- components
+          |---- sigaAjax.js
+          |---- sigaAnim.js
+          |---- sigaApi.js
+          |---- sigaClass.js
+          |---- sigaDom.js
+          |---- sigaEnu.js
+          |---- sigaEvents.js
+          |---- sigaFuncHelp.js
+          |---- sigaIndex.js 
+          |---- sigaPlugins.js
+          |---- sigaProm.js 
+          |---- sigaTouch.js  
+        |---- siga.js                              
+        </pre>
+      </div>
+    </div>
+  </div>
+  <footer class="header">
+    <div class="main-nav">
+      <ul>
+        <li class="text-center"><a href="https://github.com/amine1107">Aouane amine | 2018 MIT License</a></li>
+      </ul>
+    </div>
+  </footer>
+    <!-- Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/siga.min.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script src="assets/js/prism.js"></script>
+    <script>
+        $(".toggle").on("click", function () {
+            $(".toggle").parent().toggleClass('active');
+        });
+    </script>
+
+</body>
+</html>

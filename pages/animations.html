@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Siga | Animations</title>
+  <link rel="icon" href="../assets/img/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Kaushan+Script" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="../assets/css/lighter.min.css" />
+  <link href="../assets/css/prism.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/app.css">
+</head>
+<body class="docBody">
+
+
+  <!-- Sidenav -->
+  <div id="sidebar-toggle">
+    <span id="sidebar-toggle-1"></span>
+    <span id="sidebar-toggle-2"></span>
+    <span id="sidebar-toggle-3"></span>
+  </div>
+  <aside class="sidebar">
+    <h2 class="sidebar-head"><a class="zoom-fade" href="../index.html">Siga"</a></h2>
+    <div class="sidebar-nav text-center">
+
+      <a href="../index.html">Home</a>
+      <a href="docs.html">Getting Started</a> 
+      <hr><!-- End Getting started -->
+      <a href="animations.html">Siga Animation</a>
+      <a href="core.html">Siga Core</a>
+      <a href="enumerable.html">Siga Enumerable</a>
+      <a href="events.html">Siga Events</a>  
+      <a href="ajax.html">Siga Ajax</a>     
+      <a href="class.html">Siga Class</a>
+      <a href="plugins.html">Siga Plugins</a>
+      <a href="touche.html">Siga Touche</a>
+    </div>
+  </div>
+</aside>
+<!-- Main -->
+<div class="post">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="text-purpple"><a href="##">#</a> Animations</h3>
+                <hr>
+                <h6>Content :</h6>
+                <ol>
+                  <li><a href="animations.html#usingCss">Using Css</a></li>
+                  <li><a href="animations.html#fade">Fade an element</a></li>
+                  <li><a href="animations.html#fadeIn">Fade in an element</a></li>
+                  <li><a href="animations.html#fadeOut">Fade out an element</a></li>
+                  <li><a href="animations.html#highElement">HighLight an element</a></li>
+                  <li><a href="animations.html#move">Move an element</a></li>
+                  <li><a href="animations.html#parse">Parse colour strings</a></li>
+                  <li><a href="animations.html#chainAnim">Chain animation module calls</a></li>
+                  <li><a href="animations.html#chainAnimDom">Chain animation DOM</a></li>
+                </ol>
+                <hr>
+                <p>The main animation method is Siga.anim.animate. The animate method animates CSS properties.</p>
+                <p>There are also animation helper methods, like Siga.anim.fadeIn and Siga.anim.move.</p>
+                <h6 class="text-purpple">Animations Exemple:</h6>
+                <p>Turn a paragraph red :</p>
+                <pre>
+                  <code class="language-javascript">
+Siga.anim.animate(S('p')[0], 2000, {
+   'color': '#ff0000'
+ });                    
+                  </code>
+                </pre>
+                <p>Move a paragraph :</p>
+                <pre>
+                  <code class="language-javascript">
+Siga.anim.animate(S('p')[0], 2000, {
+   'marginLeft': '400px'
+ });                    
+                  </code>
+                </pre>
+                <p>It's possible to chain animation module calls with Siga.anim.chain, but it's easier to use the DOM chained methods:</p>
+                <pre>
+                  <code class="language-javascript">
+Siga('p').fadeIn(2000).animate(1000, {
+   'marginLeft': '200px'
+ })                 
+                  </code>
+                </pre>
+                <p>Or Simply :</p>
+                <pre>
+                  <code class="language-javascript">
+S('p').fadeIn(2000).animate(1000, {
+   'marginLeft': '200px'
+ })                
+                  </code>
+                </pre>
+                <hr>
+                <h6 class="text-purpple" id="UsingCss">Animates an element using CSS properties :</h6>
+                <ul>
+                  <li><strong>@Param: </strong>Object element A DOM element</li>
+                  <li><strong>@Param: </strong>Number duration Duration in milliseconds</li>
+                  <li><strong>@Param: </strong>Object properties CSS properties to animate, for example: { width: '20px' }</li>
+                  <li><strong>@Param: </strong>Object options Currently accepts an easing function or built-in easing method name (linear, sine, reverse, spring, bounce)</li>
+                </ul>
+                <hr>
+                <h6 class="text-purpple" id="fade">Fade an element</h6>
+                <pre>
+                  <code class="language-javascript">
+Siga.anim.fade(element , duration , { 'from' : '8em' , 'to' : '100px' , 'easing' : easing });
+               
+                  </code>
+                </pre>
+                <hr>
+                <h6 class="text-purpple" id="fadeIn">Fade in an element</h6>
+                <ul>
+                  <li><strong>@Param: </strong>Object element A DOM element</li>
+                  <li><strong>@Param: </strong>Number duration Duration in milliseconds</li>
+                  <li><strong>@Param: </strong>Object options May include an easing function: { to: 1, from: 0, easing: 'bounce' }</li>
+                </ul>
+                <pre>
+                  <code class="language-javascript">
+S('p').fadeIn(2000).animate(1000, {
+   'marginLeft': '200px'
+ })                
+                  </code>
+                </pre>
+                <hr>
+                 <h6 class="text-purpple" id="fadeOut">Fade out an element</h6>
+                <ul>
+                  <li><strong>@Param: </strong>Object element A DOM element</li>
+                  <li><strong>@Param: </strong>Number duration Duration in milliseconds</li>
+                  <li><strong>@Param: </strong>Object options May include an easing function: Object options May include an easing function: { to: 1, from: 0, easing: 'bounce' }</li>
+                </ul>
+                <pre>
+                  <code class="language-javascript">
+S('p').fadeOut(2000).animate(1000, {
+   'marginLeft': '200px'
+ })                
+                  </code>
+                </pre>
+                <hr>
+                <h6 class="text-purpple" id="highElement">Highlight an element.</h6>
+                <ul>
+                  <li><strong>@Param: </strong>Object element A DOM element</li>
+                  <li><strong>@Param: </strong>Number duration Duration in milliseconds</li>
+                  <li><strong>@Param: </strong>Object options May include an easing function: { to: 1, from: 0, easing: 'bounce' }</li>
+                </ul>
+                <hr>
+                  <h6 class="text-purpple" id="move">Move an element.</h6>
+                <ul>
+                  <li><strong>@Param: </strong>Object element A DOM element</li>
+                  <li><strong>@Param: </strong>Number duration Duration in milliseconds</li>
+                  <li><strong>@Param: </strong>Object options Position and easing, for example: { left: 100, top: 50, easing: 'sine' }</li>
+                </ul>
+                <hr>
+                <h6 class="text-purpple" id="parse">Parse colour strings</h6>
+                 <pre>
+                  <code class="language-javascript">
+assert.equal('rgb(255, 0, 255)',
+              Siga.anim.parseColour('#ff00ff').toString());               
+                  </code>
+                </pre>
+                  <ul>
+                    <li><strong>@Param: </strong>String colourString A hex colour string</li>
+                    <li><strong>@Returns: </strong>String RGB string</li>
+                  </ul>
+                  <hr>
+                  <h6 class="text-purpple" id="chainAnim">Chain animation module calls</h6>
+                   <pre>
+                  <code class="language-javascript">
+Siga.anim.chain(element)
+  .highlight()
+  .pause(250)
+  .move(100, { x: '100px', y: '100px', easing: 'ease-in-out' })
+  .animate(250, { width: '1000px' })
+  .fadeOut(250)
+  .pause(250)
+  .fadeIn(250)
+  .animate(250, { width: '20px' });               
+                  </code>
+                </pre>
+                <ul>
+                    <li><strong>@Param: </strong>Object element A DOM element</li>
+                    <li><strong>@Returns: </strong>Chainer Chained API object</li>
+                  </ul>
+                  <hr>
+                  <h6 class="text-purpple" id="chainAnimDom">Chain animation DOM</h6>
+                   <pre>
+                  <code class="language-javascript">
+Siga('p').animate(2000, {
+    color: '#ff0000'
+  });               
+                  </code>
+                </pre>
+            </div>    
+        </div>
+    </div>   
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="../assets/js/siga.min.js"></script>
+    <script type="text/javascript" src="../assets/js/app.js"></script>
+    <script src="../assets/js/prism.js"></script>
+    <!-- Dropdown Script -->
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+     
+ </script>
+ <!-- Sidenav -->
+ <script type="text/javascript">
+    var sidebarToggle = document.getElementById("sidebar-toggle");
+
+    sidebarToggle.addEventListener("click", function() {
+      document.body.classList.toggle("close");
+  });
+
+    $('h2').on("touchstart",function (){
+  //simply starts listening for touchstart - allows for hover state on touch devices
+});
+</script>
+</body>
+</html>
